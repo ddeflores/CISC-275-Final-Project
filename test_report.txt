@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (140 ms)
+  ✕ renders the course name somewhere (186 ms)
 
   ● renders the course name somewhere
 
@@ -115,9 +115,31 @@ FAIL src/App.test.tsx
                           [33mclass[39m=[32m"btn btn-primary"[39m
                           [33mtype[39m=[32m"button"[39m
                         [36m>[39m
+                          [0mReport[0m
+                        [36m</button>[39m
+                        [36m<span />[39m
+                      [36m</span>[39m
+                      [36m<span[39m
+                        [33mstyle[39m=[32m"margin-left: 125px;"[39m
+                      [36m>[39m
+                        [36m<button[39m
+                          [33mclass[39m=[32m"btn btn-primary"[39m
+                          [33mtype[39m=[32m"button"[39m
+                        [36m>[39m
                           [0mLike[0m
                         [36m</button>[39m
                         [0m0[0m
+                      [36m</span>[39m
+                    [36m</div>[39m
+                    [36m<div>[39m
+                      [36m<span>[39m
+                        [36m<button[39m
+                          [33mclass[39m=[32m"btn btn-primary"[39m
+                          [33mtype[39m=[32m"button"[39m
+                        [36m>[39m
+                          [0mReccomended[0m
+                        [36m</button>[39m
+                        [36m<span />[39m
                       [36m</span>[39m
                     [36m</div>[39m
                   [36m</ul>[39m
@@ -143,9 +165,31 @@ FAIL src/App.test.tsx
                           [33mclass[39m=[32m"btn btn-primary"[39m
                           [33mtype[39m=[32m"button"[39m
                         [36m>[39m
+                          [0mReport[0m
+                        [36m</button>[39m
+                        [36m<span />[39m
+                      [36m</span>[39m
+                      [36m<span[39m
+                        [33mstyle[39m=[32m"margin-left: 125px;"[39m
+                      [36m>[39m
+                        [36m<button[39m
+                          [33mclass[39m=[32m"btn btn-primary"[39m
+                          [33mtype[39m=[32m"button"[39m
+                        [36m>[39m
                           [0mLike[0m
                         [36m</button>[39m
                         [0m0[0m
+                      [36m</span>[39m
+                    [36m</div>[39m
+                    [36m<div>[39m
+                      [36m<span>[39m
+                        [36m<button[39m
+                          [33mclass[39m=[32m"btn btn-primary"[39m
+                          [33mtype[39m=[32m"button"[39m
+                        [36m>[39m
+                          [0mReccomended[0m
+                        [36m</button>[39m
+                        [36m<span />[39m
                       [36m</span>[39m
                     [36m</div>[39m
                   [36m</ul>[39m
@@ -154,53 +198,7 @@ FAIL src/App.test.tsx
                   [36m>[39m
                     [36m<h5>[39m
                       [0mWho Deserves Album of the Year in 2023?[0m
-                    [36m</h5>[39m
-                    [36m<div>[39m
-                      [0mDescription: [0m
-                      [0mDescription here[0m
-                    [36m</div>[39m
-                    [0mGenre: [0m
-                    [0mMusic[0m
-                    [36m<img[39m
-                      [33malt[39m=[32m"Who Deserves Album of the Year in 2023?"[39m
-                      [33msrc[39m=[32m"placeholder.jpeg"[39m
-                    [36m/>[39m
-                    [36m<div>[39m
-                      [36m<span>[39m
-                        [36m<button[39m
-                          [33mclass[39m=[32m"btn btn-primary"[39m
-                          [33mtype[39m=[32m"button"[39m
-                        [36m>[39m
-                          [0mLike[0m
-                        [36m</button>[39m
-                        [0m0[0m
-                      [36m</span>[39m
-                    [36m</div>[39m
-                  [36m</ul>[39m
-                  [36m<ul[39m
-                    [33mstyle[39m=[32m"break-inside: avoid;"[39m
-                  [36m>[39m
-                    [36m<h5>[39m
-                      [0mTop 10 Artists You’ve Never Heard Of[0m
-                    [36m</h5>[39m
-                    [36m<div>[39m
-                      [0mDescription: [0m
-                      [0mDescription here[0m
-                    [36m</div>[39m
-                    [0mGenre: [0m
-                    [0mMusic[0m
-                    [36m<img[39m
-                      [33malt[39m=[32m"Top 10 Artists You’ve Never Heard Of"[39m
-                      [33msrc[39m=[32m"placeholder.jpeg"[39m
-                    [36m/>[39m
-                    [36m<div>[39m
-                      [36m<span>[39m
-                        [36m<button[39m
-                          [33mclass[39m=[32m"btn btn-primary"[39m
-                          [33mtype[39m=[32m"button"[39m
-                        [36m>[39m
-                          [0mLike[0m
-                      ...
+                    [36m</h5>[3...
 
        5 | test("renders the course name somewhere", () => {
        6 |     render(<App />);
@@ -223,7 +221,7 @@ FAIL src/App.test.tsx
 -------------------------|---------|----------|---------|---------|-------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------|---------|----------|---------|---------|-------------------
-All files                |      40 |        0 |   26.66 |      40 |                   
+All files                |   33.33 |    16.66 |   19.04 |   33.33 |                   
  src                     |   66.66 |      100 |      50 |   66.66 |                   
   App.tsx                |   66.66 |      100 |      50 |   66.66 | 11                
  src/Interfaces          |       0 |        0 |       0 |       0 |                   
@@ -231,12 +229,12 @@ All files                |      40 |        0 |   26.66 |      40 |
   ModeratorInterface.tsx |       0 |        0 |       0 |       0 |                   
   VideoInterface.tsx     |       0 |        0 |       0 |       0 |                   
   ViewerInterface.tsx    |       0 |        0 |       0 |       0 |                   
- src/project-components  |   35.29 |        0 |   23.07 |   35.29 |                   
-  CentralItemList.tsx    |   57.14 |        0 |      40 |   57.14 | 285-287,310       
+ src/project-components  |   29.16 |    16.66 |   15.78 |   29.16 |                   
+  CentralItemList.tsx    |   35.71 |       20 |   18.18 |   35.71 | 473-495,519-543   
   ReviewList.tsx         |      20 |        0 |    12.5 |      20 | 10-24,35-46       
 -------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.319 s
+Time:        2.477 s
 Ran all test suites.
