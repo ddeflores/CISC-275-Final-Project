@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (182 ms)
+  ✕ renders the course name somewhere (140 ms)
 
   ● renders the course name somewhere
 
@@ -32,13 +32,13 @@ FAIL src/App.test.tsx
               [36m<div>[39m
                 [36m<label[39m
                   [33mclass[39m=[32m"form-label"[39m
-                  [33mfor[39m=[32m"userRole"[39m
+                  [33mfor[39m=[32m"userRoles"[39m
                 [36m>[39m
                   [0mChoose your role:[0m
                 [36m</label>[39m
                 [36m<select[39m
                   [33mclass[39m=[32m"form-select"[39m
-                  [33mid[39m=[32m"userRole"[39m
+                  [33mid[39m=[32m"userRoles"[39m
                 [36m>[39m
                   [36m<option[39m
                     [33mvalue[39m=[32m"viewer"[39m
@@ -60,8 +60,31 @@ FAIL src/App.test.tsx
             [36m</span>[39m
           [36m</div>[39m
           [36m<div[39m
+            [33mhidden[39m=[32m""[39m
+            [33mstyle[39m=[32m"display: flex; text-align: center;"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<div>[39m
+                [36m<h1>[39m
+                  [0mUnder Review:[0m
+                [36m</h1>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"row"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"col"[39m
+                  [33mstyle[39m=[32m"column-count: 2;"[39m
+                [36m/>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
             [33mclass[39m=[32m"videoList"[39m
           [36m>[39m
+            [36m<h2>[39m
+              [0mVideos:[0m
+            [36m</h2>[39m
             [36m<div>[39m
               [36m<div[39m
                 [33mclass[39m=[32m"row"[39m
@@ -177,26 +200,7 @@ FAIL src/App.test.tsx
                           [33mtype[39m=[32m"button"[39m
                         [36m>[39m
                           [0mLike[0m
-                        [36m</button>[39m
-                        [0m0[0m
-                      [36m</span>[39m
-                    [36m</div>[39m
-                  [36m</ul>[39m
-                  [36m<ul[39m
-                    [33mstyle[39m=[32m"break-inside: avoid;"[39m
-                  [36m>[39m
-                    [36m<h5>[39m
-                      [0mWhy Drake is Overrated[0m
-                    [36m</h5>[39m
-                    [36m<div>[39m
-                      [0mDescription: [0m
-                      [0mDescription here[0m
-                    [36m</div>[39m
-                    [0mGenre: [0m
-                    [0mMusic[0m
-                    [36m<img[39m
-                      [33malt[39m=[32m"Why Drake is Overrated"[39m
-                      [33ms...
+                      ...
 
        5 | test("renders the course name somewhere", () => {
        6 |     render(<App />);
@@ -219,19 +223,20 @@ FAIL src/App.test.tsx
 -------------------------|---------|----------|---------|---------|-------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------|---------|----------|---------|---------|-------------------
-All files                |      60 |        0 |   42.85 |      60 |                   
+All files                |      40 |        0 |   26.66 |      40 |                   
  src                     |   66.66 |      100 |      50 |   66.66 |                   
-  App.tsx                |   66.66 |      100 |      50 |   66.66 | 10                
+  App.tsx                |   66.66 |      100 |      50 |   66.66 | 11                
  src/Interfaces          |       0 |        0 |       0 |       0 |                   
   CreatorInterface.tsx   |       0 |        0 |       0 |       0 |                   
   ModeratorInterface.tsx |       0 |        0 |       0 |       0 |                   
   VideoInterface.tsx     |       0 |        0 |       0 |       0 |                   
   ViewerInterface.tsx    |       0 |        0 |       0 |       0 |                   
- src/project-components  |   57.14 |        0 |      40 |   57.14 |                   
-  CentralItemList.tsx    |   57.14 |        0 |      40 |   57.14 | 315-317,340       
+ src/project-components  |   35.29 |        0 |   23.07 |   35.29 |                   
+  CentralItemList.tsx    |   57.14 |        0 |      40 |   57.14 | 285-287,310       
+  ReviewList.tsx         |      20 |        0 |    12.5 |      20 | 10-24,35-46       
 -------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.986 s
+Time:        2.319 s
 Ran all test suites.
