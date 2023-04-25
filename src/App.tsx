@@ -5,7 +5,8 @@ import { Form } from "react-bootstrap";
 
 function App(): JSX.Element {
     //For user roles
-    const [role, setRole] = useState<string>("");
+    const [role, setRole] = useState<string>("Viewer");
+
     function updateRole(event: React.ChangeEvent<HTMLSelectElement>) {
         setRole(event.target.value);
     }
@@ -22,16 +23,15 @@ function App(): JSX.Element {
                     ></img>
                 </span>
                 <span>Clipped!</span>
-                <span>
-                    <Form.Group controlId="userRole">
-                        <Form.Label>Choose your role:</Form.Label>
-                        <Form.Select value={role} onChange={updateRole}>
-                            <option value="viewer">Viewer</option>
-                            <option value="creator">Creator</option>
-                            <option value="moderator">Moderator</option>
-                        </Form.Select>
-                    </Form.Group>
-                </span>
+                <Form.Group controlId="userRole">
+                    <Form.Label>Choose your role:</Form.Label>
+                    <Form.Select value={role} onChange={updateRole}>
+                        <option value="Viewer">Viewer</option>
+                        <option value="Creator">Creator</option>
+                        <option value="Moderator">Moderator</option>
+                    </Form.Select>
+                </Form.Group>
+                Hello, {role}!
             </div>
             <div className="videoList">
                 <CentralItemList></CentralItemList>
