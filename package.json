@@ -12,6 +12,7 @@
         "@types/react": "^17.0.38",
         "@types/react-dom": "^17.0.11",
         "react": "^17.0.2",
+        "react-beautiful-dnd": "^13.1.1",
         "react-bootstrap": "^2.1.1",
         "react-dnd": "^16.0.1",
         "react-dnd-html5-backend": "^16.0.1",
@@ -50,6 +51,7 @@
         ]
     },
     "devDependencies": {
+        "@types/react-beautiful-dnd": "^13.1.4",
         "@types/testing-library__react": "^10.2.0",
         "@typescript-eslint/eslint-plugin": "^5.10.1",
         "@typescript-eslint/parser": "^5.10.1",

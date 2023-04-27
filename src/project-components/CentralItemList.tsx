@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-//Import useState from react after removing comments
 import { Button, Row, Col } from "react-bootstrap";
 import { Video } from "../Interfaces/VideoInterface";
-import { useDrag } from "react-dnd";
-import { useDrop } from "react-dnd";
+import { Form } from "react-bootstrap";
 import placeholderthumbnail from "./placeholder.jpeg";
+import { Draggable, Droppable } from "react-beautiful-dnd";
 
 const VIDEOS: Video[] = [
     {
@@ -459,10 +458,6 @@ const VIDEOS: Video[] = [
     }
 ];
 
-export const ItemTypes = {
-    VIDEO: "video"
-};
-
 export function CentralItemList(): JSX.Element {
     const [videos, setVideos] = useState<Video[]>(VIDEOS);
 
@@ -471,6 +466,10 @@ export function CentralItemList(): JSX.Element {
         collect: (monitor) => ({ isDragging: !!monitor.isDragging() })
     }));
     const [collectVideos, drop] = useDrop(() => ({ accept: ItemTypes.VIDEO }));*/
+
+    function reorderByName() {
+        VIDEOS.sort((a, b) => a.name.localeCompare(b.name));
+    }
 
     function updateLikes(title: string) {
         setVideos(
@@ -504,13 +503,13 @@ export function CentralItemList(): JSX.Element {
 
     return (
         <div>
+            <Button onClick={reorderByName}>Change Order: By Name</Button>
+
             <Row>
                 <Col style={{ columnCount: 2 }}>
                     {videos.map((video: Video) => (
                         <ul key={video.name} style={{ breakInside: "avoid" }}>
                             <h5>{video.name}</h5>
-                            <div>Description: {video.description}</div>
-                            Genre: {video.genre}
                             <img
                                 src={placeholderthumbnail}
                                 alt={video.name}
@@ -539,6 +538,8 @@ export function CentralItemList(): JSX.Element {
                                     {video.likes}
                                 </span>
                             </div>
+                            <div>Description: {video.description}</div>
+                            Genre: {video.genre}
                             <div>
                                 <span>
                                     <Button
@@ -562,9 +563,6 @@ export function CentralItemList(): JSX.Element {
                             </div>
                         </ul>
                     ))}
-                </Col>
-                <Col>
-                    <h4>Viewer List:</h4>
                 </Col>
             </Row>
         </div>
