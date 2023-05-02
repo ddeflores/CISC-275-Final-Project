@@ -3,28 +3,28 @@
 > react-scripts test --coverage
 
 PASS src/App.test.tsx
-  ✓ renders the course name somewhere (216 ms)
+  ✓ renders the course name somewhere (238 ms)
 
--------------------------|---------|----------|---------|---------|-------------------
-File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
--------------------------|---------|----------|---------|---------|-------------------
-All files                |   44.73 |    36.36 |   22.22 |   44.73 |                   
- src                     |      80 |      100 |      50 |      80 |                   
-  App.tsx                |      75 |      100 |      50 |      75 | 19                
-  allVideos.tsx          |     100 |      100 |     100 |     100 |                   
- src/Interfaces          |       0 |        0 |       0 |       0 |                   
-  CreatorInterface.tsx   |       0 |        0 |       0 |       0 |                   
-  ModeratorInterface.tsx |       0 |        0 |       0 |       0 |                   
-  VideoInterface.tsx     |       0 |        0 |       0 |       0 |                   
-  ViewerInterface.tsx    |       0 |        0 |       0 |       0 |                   
- src/project-components  |   39.39 |       30 |      20 |   39.39 |                   
-  CentralItemList.tsx    |      25 |       20 |   18.18 |      25 | 14-36,78-96       
-  CreatorList.tsx        |   66.66 |       50 |   33.33 |   66.66 | 19,50             
-  ReviewList.tsx         |      25 |        0 |   14.28 |      25 | 10-16,27-38       
-  WatchList.tsx          |   57.14 |       50 |      25 |   57.14 | 17,40-49          
--------------------------|---------|----------|---------|---------|-------------------
+-------------------------|---------|----------|---------|---------|--------------------------------
+File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s              
+-------------------------|---------|----------|---------|---------|--------------------------------
+All files                |   43.13 |     37.5 |      20 |   43.13 |                                
+ src                     |      75 |      100 |      50 |      75 |                                
+  App.tsx                |   66.66 |      100 |      50 |   66.66 | 15                             
+  allVideos.tsx          |     100 |      100 |     100 |     100 |                                
+ src/Interfaces          |       0 |        0 |       0 |       0 |                                
+  CreatorInterface.tsx   |       0 |        0 |       0 |       0 |                                
+  ModeratorInterface.tsx |       0 |        0 |       0 |       0 |                                
+  VideoInterface.tsx     |       0 |        0 |       0 |       0 |                                
+  ViewerInterface.tsx    |       0 |        0 |       0 |       0 |                                
+ src/project-components  |   40.42 |    31.81 |   18.18 |   40.42 |                                
+  CentralItemList.tsx    |      25 |       20 |   18.18 |      25 | 14-36,78-96                    
+  CreatorList.tsx        |      50 |       50 |   18.18 |      50 | 15,20,25,30,35,40,47-48,89-177 
+  ReviewList.tsx         |      25 |        0 |   14.28 |      25 | 10-16,27-38                    
+  WatchList.tsx          |   57.14 |       50 |      25 |   57.14 | 17,40-49                       
+-------------------------|---------|----------|---------|---------|--------------------------------
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        2.629 s
+Time:        2.772 s
 Ran all test suites.
