@@ -8,6 +8,8 @@ import { VIDEOS } from "../allVideos";
 export function CreatorList(): JSX.Element {
     //const creatorVideos: Video[] = [];
 
+    const deepCopyVideos = VIDEOS.map((video: Video): Video => ({ ...video }));
+
     const [uploadMode, setUploadMode] = useState<boolean>(false);
     function updateMode(event: React.ChangeEvent<HTMLInputElement>) {
         setUploadMode(event.target.checked);
@@ -44,9 +46,9 @@ export function CreatorList(): JSX.Element {
     }
 
     //fix this
-    function reorderByName() {
+    /*function reorderByName() {
         VIDEOS.sort((a, b) => a.name.localeCompare(b.name));
-    }
+    }*/
 
     return (
         <div>
@@ -79,6 +81,7 @@ export function CreatorList(): JSX.Element {
                         ))}
                     </Col>
                     <Col>
+                        <h1>Creator Videos</h1>
                         <Form.Switch
                             type="switch"
                             id="uploaf-mode-check"
@@ -174,7 +177,14 @@ export function CreatorList(): JSX.Element {
                             <span>{""}</span>
                         )}
                     </Col>
-                    <Col>
+                </Row>
+            </div>
+        </div>
+    );
+}
+
+/*
+ <Col>
                         <h1>Filter videos</h1>
                         <div>
                             <Form.Group controlId="userEmotions">
@@ -190,20 +200,10 @@ export function CreatorList(): JSX.Element {
                                     <option value="Education">Education</option>
                                     <option value="How-To">How-To</option>
                                 </Form.Select>
+                                <Button></Button>
                             </Form.Group>
-                            {VIDEOS.filter(
-                                (video: Video): boolean =>
-                                    video.genre === filterGenre
-                            )}
                         </div>
                     </Col>
-                </Row>
-            </div>
-        </div>
-    );
-}
-
-/*
 videoGenre === "Music"
                                                     ? [
                                                           "The Best Pop Songs from the 2000's",
