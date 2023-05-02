@@ -115,7 +115,6 @@ export function CentralItemList({
                         </ul>
                     ))}
                 </Col>
-                <Col>Add video?</Col>
             </Row>
         </div>
     );
