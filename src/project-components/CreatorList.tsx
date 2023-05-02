@@ -4,10 +4,17 @@ import { Video } from "../Interfaces/VideoInterface";
 import placeholderthumbnail from "../placeholder.jpeg";
 import { CentralItemList } from "./CentralItemList";
 import { VIDEOS } from "../allVideos";
+import { Creator } from "../Interfaces/CreatorInterface";
 
-export function CreatorList(): JSX.Element {
-    //const creatorVideos: Video[] = [];
-
+export function CreatorList({
+    currentCreator
+}: {
+    currentCreator: Creator;
+}): JSX.Element {
+    const [creator, setCreator] = useState<string>(currentCreator.username);
+    const userList: string[] = ["Dan", "James", "Jess"];
+    //const [creatorVideos, setCreatorVideos] = useState<Video[]>([]);
+    
     const deepCopyVideos = VIDEOS.map((video: Video): Video => ({ ...video }));
 
     const [uploadMode, setUploadMode] = useState<boolean>(false);
@@ -60,6 +67,11 @@ export function CreatorList(): JSX.Element {
                         value={creator}
                         onChange={updateCreator}
                     ></Form.Control>
+                    <Form.Label>
+                        {userList.includes(creator) ? "Welcome " : ""}
+                        {userList.includes(creator) ? creator : "Not a creator"}
+                        {"!"}
+                    </Form.Label>
                 </Form.Group>
             </div>
             <div>

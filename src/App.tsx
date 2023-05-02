@@ -3,11 +3,8 @@ import "./App.css";
 import { CentralItemList } from "./project-components/CentralItemList";
 import { ReviewList } from "./project-components/ReviewList";
 import { Form } from "react-bootstrap";
-<<<<<<< HEAD
 import { Button, Row, Col } from "react-bootstrap";
 import { Video } from "./Interfaces/VideoInterface";
-//import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-=======
 import { CreatorList } from "./project-components/CreatorList";
 import { WatchList } from "./project-components/WatchList";
 import { VIDEOS } from "./allVideos";
@@ -15,7 +12,6 @@ import { VIDEOS } from "./allVideos";
 export const ItemTypes = {
     VIDEO: "video"
 };
->>>>>>> 3f527b31861d2b8186603bf32434021a4a46adb5
 
 function App(): JSX.Element {
     //For user roles
@@ -25,10 +21,6 @@ function App(): JSX.Element {
         setRole(event.target.value);
     }
 
-<<<<<<< HEAD
-    //Actual app
-=======
->>>>>>> 3f527b31861d2b8186603bf32434021a4a46adb5
     return (
         <div className="App">
             {/**App Logo and Role Choice*/}
@@ -59,10 +51,9 @@ function App(): JSX.Element {
                 style={{ display: "flex", textAlign: "center" }}
             >
                 <h2>Under Review:</h2>
-                <ReviewList></ReviewList>
+                <ReviewList videoList={[]}></ReviewList>
             </div>
             <div
-<<<<<<< HEAD
                 hidden={role !== "creator"}
                 style={{ display: "flex", textAlign: "center" }}
             >
@@ -86,7 +77,8 @@ function App(): JSX.Element {
                 <h2>Videos:</h2>
 
                 <CentralItemList></CentralItemList>
-=======
+            </div>
+            <div
                 className="videoList"
                 hidden={role === "creator" || role === "moderator"}
             >
@@ -95,13 +87,21 @@ function App(): JSX.Element {
             </div>
             <div style={{ marginRight: 150, marginTop: 50 }}>
                 <h2 hidden={role !== "viewer"}>Watchlist:</h2>
-                <div hidden={role !== "viewer"}>
-                    <WatchList userVideos={[]}></WatchList>
+                <div hidden={role !== "viewer"} style={{ marginLeft: 50 }}>
+                    <WatchList
+                        currentUser={{ username: "Dan", watchlist: [] }}
+                    ></WatchList>
                 </div>
             </div>
             <div hidden={role !== "creator"}>
-                <CreatorList></CreatorList>
->>>>>>> 3f527b31861d2b8186603bf32434021a4a46adb5
+                <CreatorList
+                    currentCreator={{
+                        username: "Dan",
+                        createdVideos: [],
+                        flaggedVideos: [],
+                        blockedUsers: []
+                    }}
+                ></CreatorList>
             </div>
         </div>
     );
