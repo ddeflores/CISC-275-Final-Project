@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Video } from "../Interfaces/VideoInterface";
 import { Row, Col, Button } from "react-bootstrap";
-import placeholderthumbnail from "./placeholder.jpeg";
+import placeholderthumbnail from "../placeholder.jpeg";
 
 export function ReviewList(): JSX.Element {
     const [flaggedVideos, setFlaggedVideos] = useState<Video[]>([]);
@@ -19,16 +19,8 @@ export function ReviewList(): JSX.Element {
         );
     }
 
-    function updateAndSetFlagged(videos: Video[], title: string) {
-        updateFlagged(title);
-        initializeFlagged();
-    }
-
     return (
         <div>
-            <div>
-                <h1>Under Review:</h1>
-            </div>
             <Row>
                 <Col style={{ columnCount: 2 }}>
                     {flaggedVideos.map((video: Video) => (
@@ -42,12 +34,10 @@ export function ReviewList(): JSX.Element {
                             ></img>
                             <div>
                                 <Button
-                                    onClick={() =>
-                                        updateAndSetFlagged(
-                                            flaggedVideos,
-                                            video.name
-                                        )
-                                    }
+                                    onClick={() => (
+                                        updateFlagged(video.name),
+                                        initializeFlagged()
+                                    )}
                                 >
                                     Unflag
                                 </Button>
