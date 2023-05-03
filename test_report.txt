@@ -1,30 +1,75 @@
 
-> react-typescript-starter@0.1.0 test
+> test-app@0.1.0 test
 > react-scripts test --coverage
 
-PASS src/App.test.tsx
-  ✓ renders the course name somewhere (238 ms)
+FAIL src/App.test.tsx
+  ● Test suite failed to run
 
--------------------------|---------|----------|---------|---------|--------------------------------
-File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s              
--------------------------|---------|----------|---------|---------|--------------------------------
-All files                |   43.13 |     37.5 |      20 |   43.13 |                                
- src                     |      75 |      100 |      50 |      75 |                                
-  App.tsx                |   66.66 |      100 |      50 |   66.66 | 15                             
-  allVideos.tsx          |     100 |      100 |     100 |     100 |                                
- src/Interfaces          |       0 |        0 |       0 |       0 |                                
-  CreatorInterface.tsx   |       0 |        0 |       0 |       0 |                                
-  ModeratorInterface.tsx |       0 |        0 |       0 |       0 |                                
-  VideoInterface.tsx     |       0 |        0 |       0 |       0 |                                
-  ViewerInterface.tsx    |       0 |        0 |       0 |       0 |                                
- src/project-components  |   40.42 |    31.81 |   18.18 |   40.42 |                                
-  CentralItemList.tsx    |      25 |       20 |   18.18 |      25 | 14-36,78-96                    
-  CreatorList.tsx        |      50 |       50 |   18.18 |      50 | 15,20,25,30,35,40,47-48,89-177 
-  ReviewList.tsx         |      25 |        0 |   14.28 |      25 | 10-16,27-38                    
-  WatchList.tsx          |   57.14 |       50 |      25 |   57.14 | 17,40-49                       
--------------------------|---------|----------|---------|---------|--------------------------------
-Test Suites: 1 passed, 1 total
-Tests:       1 passed, 1 total
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    /home/runner/work/CISC-275-Final-Project-Group4/CISC-275-Final-Project-Group4/node_modules/react-dnd/dist/index.js:1
+    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){export * from './core/index.js';
+                                                                                      ^^^^^^
+
+    SyntaxError: Unexpected token 'export'
+
+      2 | import "./App.css";
+      3 | import { Form } from "react-bootstrap";
+    > 4 | import { DndProvider } from "react-dnd";
+        | ^
+      5 | import { HTML5Backend } from "react-dnd-html5-backend";
+      6 | import DragDrop from "./components/DragDrop";
+      7 |
+
+      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
+      at Object.<anonymous> (src/App.tsx:4:1)
+      at Object.<anonymous> (src/App.test.tsx:3:1)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+-------------------------|---------|----------|---------|---------|-------------------
+File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------------|---------|----------|---------|---------|-------------------
+All files                |       0 |        0 |       0 |       0 |                   
+ src                     |       0 |        0 |       0 |       0 |                   
+  App.tsx                |       0 |      100 |       0 |       0 | 8-19              
+  allVideos.tsx          |       0 |      100 |     100 |       0 | 4                 
+  index.tsx              |       0 |      100 |     100 |       0 | 7-19              
+  reportWebVitals.ts     |       0 |        0 |       0 |       0 | 3-11              
+ src/components          |       0 |        0 |       0 |       0 |                   
+  DragDrop.tsx           |       0 |        0 |       0 |       0 | 15-409            
+  VideoComponent.tsx     |       0 |        0 |       0 |       0 | 29-124            
+  allVideos.tsx          |       0 |      100 |     100 |       0 | 3                 
+ src/interfaces          |       0 |        0 |       0 |       0 |                   
+  CreatorInterface.tsx   |       0 |        0 |       0 |       0 |                   
+  ModeratorInterface.tsx |       0 |        0 |       0 |       0 |                   
+  VideoInterface.tsx     |       0 |        0 |       0 |       0 |                   
+  ViewerInterface.tsx    |       0 |        0 |       0 |       0 |                   
+-------------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 failed, 1 total
+Tests:       0 total
 Snapshots:   0 total
-Time:        2.772 s
+Time:        3.225 s
 Ran all test suites.
