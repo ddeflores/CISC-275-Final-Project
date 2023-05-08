@@ -59,7 +59,7 @@ All files                |       0 |        0 |       0 |       0 |
   index.tsx              |       0 |      100 |     100 |       0 | 7-19              
   reportWebVitals.ts     |       0 |        0 |       0 |       0 | 3-11              
  src/components          |       0 |        0 |       0 |       0 |                   
-  DragDrop.tsx           |       0 |        0 |       0 |       0 | 15-563            
+  DragDrop.tsx           |       0 |        0 |       0 |       0 | 15-590            
   VideoComponent.tsx     |       0 |        0 |       0 |       0 | 47-187            
   allVideos.tsx          |       0 |      100 |     100 |       0 | 32                
  src/interfaces          |       0 |        0 |       0 |       0 |                   
@@ -71,5 +71,5 @@ All files                |       0 |        0 |       0 |       0 |
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        2.782 s
+Time:        3.2 s
 Ran all test suites.
