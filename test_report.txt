@@ -3,18 +3,18 @@
 > react-scripts test --coverage
 
 PASS src/App.test.tsx
-  ✓ renders the course name somewhere (340 ms)
-  ✓ check Filter a to z (195 ms)
+  ✓ renders the course name somewhere (413 ms)
+  ✓ check Filter a to z (275 ms)
 
 -------------------------|---------|----------|---------|---------|--------------------------------------------------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                            
 -------------------------|---------|----------|---------|---------|--------------------------------------------------------------
-All files                |   18.79 |    22.41 |   11.76 |   18.05 |                                                              
+All files                |   18.06 |    21.66 |   11.26 |   17.33 |                                                              
  src                     |      75 |      100 |      50 |      75 |                                                              
   App.tsx                |      75 |      100 |      50 |      75 | 16                                                           
- src/components          |   17.24 |    22.41 |    10.6 |   16.42 |                                                              
-  DragDrop.tsx           |   16.66 |    17.39 |    8.16 |   16.32 | 22,34,46,54,59,64,69-108,115,122-189,195-210,215-230,362-677 
-  VideoComponent.tsx     |   16.66 |    41.66 |   17.64 |   14.63 | 68-92,105,109-121,158-256                                    
+ src/components          |   16.55 |    21.66 |   10.14 |   15.75 |                                                              
+  DragDrop.tsx           |   15.88 |    16.66 |    7.84 |   15.53 | 22,34,46,54,59,64,69-108,115,122-196,202-217,222-242,394-721 
+  VideoComponent.tsx     |   16.27 |    41.66 |   16.66 |   14.28 | 70-94,107,111-123,160-268                                    
   allVideos.tsx          |     100 |      100 |     100 |     100 |                                                              
  src/interfaces          |       0 |        0 |       0 |       0 |                                                              
   CreatorInterface.tsx   |       0 |        0 |       0 |       0 |                                                              
@@ -25,5 +25,5 @@ All files                |   18.79 |    22.41 |   11.76 |   18.05 |
 Test Suites: 1 passed, 1 total
 Tests:       2 passed, 2 total
 Snapshots:   0 total
-Time:        4.645 s
+Time:        5.632 s
 Ran all test suites.
