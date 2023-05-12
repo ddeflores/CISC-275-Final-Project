@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CISC-275-Final-Project-Group4/static/css/main.87e441a7.css",
-    "main.js": "/CISC-275-Final-Project-Group4/static/js/main.348f1ae1.js",
+    "main.js": "/CISC-275-Final-Project-Group4/static/js/main.75ae4fe5.js",
     "static/js/787.a86f3764.chunk.js": "/CISC-275-Final-Project-Group4/static/js/787.a86f3764.chunk.js",
     "static/media/gaming1.jpeg": "/CISC-275-Final-Project-Group4/static/media/gaming1.0afe80e08c83104a7d07.jpeg",
     "static/media/howto5.jpeg": "/CISC-275-Final-Project-Group4/static/media/howto5.da5887aa98034120b3d2.jpeg",
@@ -36,11 +36,11 @@
     "static/media/music1.jpeg": "/CISC-275-Final-Project-Group4/static/media/music1.a4e013b477829a863aaa.jpeg",
     "index.html": "/CISC-275-Final-Project-Group4/index.html",
     "main.87e441a7.css.map": "/CISC-275-Final-Project-Group4/static/css/main.87e441a7.css.map",
-    "main.348f1ae1.js.map": "/CISC-275-Final-Project-Group4/static/js/main.348f1ae1.js.map",
+    "main.75ae4fe5.js.map": "/CISC-275-Final-Project-Group4/static/js/main.75ae4fe5.js.map",
     "787.a86f3764.chunk.js.map": "/CISC-275-Final-Project-Group4/static/js/787.a86f3764.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.87e441a7.css",
-    "static/js/main.348f1ae1.js"
+    "static/js/main.75ae4fe5.js"
   ]
 }

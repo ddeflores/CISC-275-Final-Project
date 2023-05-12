@@ -3,8 +3,8 @@
 > react-scripts test --coverage
 
 PASS src/App.test.tsx
-  ✓ renders the course name somewhere (413 ms)
-  ✓ check Filter a to z (275 ms)
+  ✓ renders the course name somewhere (355 ms)
+  ✓ check Filter a to z (231 ms)
 
 -------------------------|---------|----------|---------|---------|--------------------------------------------------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                            
@@ -25,5 +25,5 @@ All files                |   18.06 |    21.66 |   11.26 |   17.33 |
 Test Suites: 1 passed, 1 total
 Tests:       2 passed, 2 total
 Snapshots:   0 total
-Time:        5.632 s
+Time:        4.769 s
 Ran all test suites.
