@@ -2,7 +2,7 @@
 > test-app@0.1.0 test
 > react-scripts test --coverage
 
-FAIL src/App.test.tsx (5.752 s)
+FAIL src/App.test.tsx (8.319 s)
   ● Console
 
     console.error
@@ -899,5 +899,5 @@ All files                |   18.06 |    21.66 |   11.26 |   17.33 |
 Test Suites: 2 failed, 2 total
 Tests:       5 failed, 13 passed, 18 total
 Snapshots:   0 total
-Time:        8.486 s
+Time:        11.722 s
 Ran all test suites.
