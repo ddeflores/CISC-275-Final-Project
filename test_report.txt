@@ -2,7 +2,7 @@
 > test-app@0.1.0 test
 > react-scripts test --coverage
 
-FAIL src/App.test.tsx (5.546 s)
+FAIL src/App.test.tsx (6.049 s)
   ● Console
 
     console.error
@@ -895,11 +895,11 @@ FAIL src/DragDrop.test.tsx
 -------------------------|---------|----------|---------|---------|--------------------------------------------------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                            
 -------------------------|---------|----------|---------|---------|--------------------------------------------------------------
-All files                |   17.72 |    22.58 |   10.95 |   16.99 |                                                              
+All files                |   16.09 |    18.91 |   10.38 |   15.38 |                                                              
  src                     |      75 |      100 |      50 |      75 |                                                              
   App.tsx                |      75 |      100 |      50 |      75 | 16                                                           
- src/components          |   16.23 |    22.58 |    9.85 |   15.43 |                                                              
-  DragDrop.tsx           |   15.88 |    16.66 |    7.84 |   15.53 | 22,34,46,54,59,64,69-108,115,122-196,202-217,222-242,406-737 
+ src/components          |    14.7 |    18.91 |    9.33 |   13.93 |                                                              
+  DragDrop.tsx           |   13.82 |    13.33 |    7.27 |   13.44 | 22,34,46,54,59,64,69-108,115,122-196,202-217,222-290,454-797 
   VideoComponent.tsx     |   15.21 |    42.85 |      15 |   13.33 | 73-102,115,119-131,155-283                                   
   allVideos.tsx          |     100 |      100 |     100 |     100 |                                                              
  src/interfaces          |       0 |        0 |       0 |       0 |                                                              
@@ -911,5 +911,5 @@ All files                |   17.72 |    22.58 |   10.95 |   16.99 |
 Test Suites: 2 failed, 2 total
 Tests:       5 failed, 13 passed, 18 total
 Snapshots:   0 total
-Time:        8.103 s
+Time:        8.553 s
 Ran all test suites.
