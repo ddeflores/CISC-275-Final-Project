@@ -2,7 +2,7 @@
 > test-app@0.1.0 test
 > react-scripts test --coverage
 
-FAIL src/App.test.tsx (6.049 s)
+FAIL src/App.test.tsx (5.712 s)
   ● Console
 
     console.error
@@ -892,24 +892,24 @@ FAIL src/DragDrop.test.tsx
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
--------------------------|---------|----------|---------|---------|--------------------------------------------------------------
-File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                            
--------------------------|---------|----------|---------|---------|--------------------------------------------------------------
-All files                |   16.09 |    18.91 |   10.38 |   15.38 |                                                              
- src                     |      75 |      100 |      50 |      75 |                                                              
-  App.tsx                |      75 |      100 |      50 |      75 | 16                                                           
- src/components          |    14.7 |    18.91 |    9.33 |   13.93 |                                                              
-  DragDrop.tsx           |   13.82 |    13.33 |    7.27 |   13.44 | 22,34,46,54,59,64,69-108,115,122-196,202-217,222-290,454-797 
-  VideoComponent.tsx     |   15.21 |    42.85 |      15 |   13.33 | 73-102,115,119-131,155-283                                   
-  allVideos.tsx          |     100 |      100 |     100 |     100 |                                                              
- src/interfaces          |       0 |        0 |       0 |       0 |                                                              
-  CreatorInterface.tsx   |       0 |        0 |       0 |       0 |                                                              
-  ModeratorInterface.tsx |       0 |        0 |       0 |       0 |                                                              
-  VideoInterface.tsx     |       0 |        0 |       0 |       0 |                                                              
-  ViewerInterface.tsx    |       0 |        0 |       0 |       0 |                                                              
--------------------------|---------|----------|---------|---------|--------------------------------------------------------------
+-------------------------|---------|----------|---------|---------|-----------------------------------------------------------------
+File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                               
+-------------------------|---------|----------|---------|---------|-----------------------------------------------------------------
+All files                |   18.27 |    19.23 |   12.34 |   18.13 |                                                                 
+ src                     |      75 |      100 |      50 |      75 |                                                                 
+  App.tsx                |      75 |      100 |      50 |      75 | 16                                                              
+ src/components          |   17.03 |    19.23 |   11.39 |   16.85 |                                                                 
+  DragDrop.tsx           |   17.03 |    14.06 |   10.16 |   17.42 | 30-44,56,68,76,81,86,91-130,147,156-230,236-251,256-324,538-881 
+  VideoComponent.tsx     |   15.21 |    42.85 |      15 |   13.33 | 73-102,115,119-131,155-283                                      
+  allVideos.tsx          |     100 |      100 |     100 |     100 |                                                                 
+ src/interfaces          |       0 |        0 |       0 |       0 |                                                                 
+  CreatorInterface.tsx   |       0 |        0 |       0 |       0 |                                                                 
+  ModeratorInterface.tsx |       0 |        0 |       0 |       0 |                                                                 
+  VideoInterface.tsx     |       0 |        0 |       0 |       0 |                                                                 
+  ViewerInterface.tsx    |       0 |        0 |       0 |       0 |                                                                 
+-------------------------|---------|----------|---------|---------|-----------------------------------------------------------------
 Test Suites: 2 failed, 2 total
 Tests:       5 failed, 13 passed, 18 total
 Snapshots:   0 total
-Time:        8.553 s
+Time:        8.066 s
 Ran all test suites.
