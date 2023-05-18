@@ -53,22 +53,22 @@
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
-FAIL src/App.test.tsx (6.189 s)
+FAIL src/App.test.tsx (6.551 s)
   Test lists are rendered in some way
-    ✓ renders the logo somewhere (442 ms)
-    ✓ check filter a to z (239 ms)
-    ✓ check filter by genre (233 ms)
-    ✓ check clear watchlist (161 ms)
-    ✓ renders the central item list (144 ms)
-    ✓ renders the watchlist list (127 ms)
-    ✓ renders the watchlist list (136 ms)
-    ✓ renders the moderator list (126 ms)
-    ✓ renders the creator list (133 ms)
-    ✓ Role Selector Inital Value (120 ms)
-    ✓ Role selector form (116 ms)
-    ✓ Renders the Website Name (163 ms)
+    ✓ renders the logo somewhere (469 ms)
+    ✓ check filter a to z (230 ms)
+    ✓ check filter by genre (228 ms)
+    ✓ check clear watchlist (183 ms)
+    ✓ renders the central item list (152 ms)
+    ✓ renders the watchlist list (147 ms)
+    ✓ renders the watchlist list (151 ms)
+    ✓ renders the moderator list (139 ms)
+    ✓ renders the creator list (150 ms)
+    ✓ Role Selector Inital Value (139 ms)
+    ✓ Role selector form (137 ms)
+    ✓ Renders the Website Name (164 ms)
   tests lists are updated properly
-    ✕ uploading video adds to central list (268 ms)
+    ✕ uploading video adds to central list (215 ms)
 
   ● tests lists are updated properly › uploading video adds to central list
 
@@ -256,24 +256,24 @@ FAIL src/App.test.tsx (6.189 s)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
--------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------
-File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                    
--------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------
-All files                |   17.12 |    15.11 |   12.87 |   17.06 |                                                                                      
- src                     |      75 |      100 |      50 |      75 |                                                                                      
-  App.tsx                |      75 |      100 |      50 |      75 | 16                                                                                   
- src/components          |   16.03 |    15.11 |   12.12 |   15.94 |                                                                                      
-  DragDrop.tsx           |   15.75 |     9.72 |   11.39 |   16.14 | 29-41,54,64,69,74,79-118,135,144-276,283-298,303-373,382-394,554-567,693,791-920,983 
-  VideoComponent.tsx     |   15.21 |    42.85 |      15 |   13.33 | 81-110,123,127-139,163-298                                                           
-  allVideos.tsx          |     100 |      100 |     100 |     100 |                                                                                      
- src/interfaces          |       0 |        0 |       0 |       0 |                                                                                      
-  CreatorInterface.tsx   |       0 |        0 |       0 |       0 |                                                                                      
-  ModeratorInterface.tsx |       0 |        0 |       0 |       0 |                                                                                      
-  VideoInterface.tsx     |       0 |        0 |       0 |       0 |                                                                                      
-  ViewerInterface.tsx    |       0 |        0 |       0 |       0 |                                                                                      
--------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------
+-------------------------|---------|----------|---------|---------|-----------------------------------------------------------------------------------------------------------
+File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                         
+-------------------------|---------|----------|---------|---------|-----------------------------------------------------------------------------------------------------------
+All files                |   16.39 |    13.26 |    11.3 |   16.31 |                                                                                                           
+ src                     |      75 |      100 |      50 |      75 |                                                                                                           
+  App.tsx                |      75 |      100 |      50 |      75 | 16                                                                                                        
+ src/components          |   15.41 |    13.26 |   10.61 |   15.31 |                                                                                                           
+  DragDrop.tsx           |   15.02 |     8.33 |    9.67 |   15.34 | 29-41,54,64,69,74,79,84-123,140,149-283,290-305,310-385,394-411,420-446,451-463,618-672,798,896-1033,1096 
+  VideoComponent.tsx     |   15.21 |    42.85 |      15 |   13.33 | 81-110,123,127-139,163-298                                                                                
+  allVideos.tsx          |     100 |      100 |     100 |     100 |                                                                                                           
+ src/interfaces          |       0 |        0 |       0 |       0 |                                                                                                           
+  CreatorInterface.tsx   |       0 |        0 |       0 |       0 |                                                                                                           
+  ModeratorInterface.tsx |       0 |        0 |       0 |       0 |                                                                                                           
+  VideoInterface.tsx     |       0 |        0 |       0 |       0 |                                                                                                           
+  ViewerInterface.tsx    |       0 |        0 |       0 |       0 |                                                                                                           
+-------------------------|---------|----------|---------|---------|-----------------------------------------------------------------------------------------------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 12 passed, 13 total
 Snapshots:   0 total
-Time:        6.838 s
+Time:        7.216 s
 Ran all test suites.
