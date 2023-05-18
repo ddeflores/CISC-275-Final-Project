@@ -53,39 +53,227 @@
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
-PASS src/App.test.tsx (6.196 s)
+FAIL src/App.test.tsx (6.189 s)
   Test lists are rendered in some way
-    ✓ renders the logo somewhere (460 ms)
-    ✓ check filter a to z (261 ms)
-    ✓ check filter by genre (261 ms)
-    ✓ check clear watchlist (200 ms)
-    ✓ renders the central item list (177 ms)
-    ✓ renders the watchlist list (146 ms)
-    ✓ renders the watchlist list (156 ms)
-    ✓ renders the moderator list (133 ms)
-    ✓ renders the creator list (154 ms)
-    ✓ Role Selector Inital Value (136 ms)
-    ✓ Role selector form (134 ms)
-    ✓ Renders the Website Name (171 ms)
+    ✓ renders the logo somewhere (442 ms)
+    ✓ check filter a to z (239 ms)
+    ✓ check filter by genre (233 ms)
+    ✓ check clear watchlist (161 ms)
+    ✓ renders the central item list (144 ms)
+    ✓ renders the watchlist list (127 ms)
+    ✓ renders the watchlist list (136 ms)
+    ✓ renders the moderator list (126 ms)
+    ✓ renders the creator list (133 ms)
+    ✓ Role Selector Inital Value (120 ms)
+    ✓ Role selector form (116 ms)
+    ✓ Renders the Website Name (163 ms)
+  tests lists are updated properly
+    ✕ uploading video adds to central list (268 ms)
 
--------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------
-File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                        
--------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------
-All files                |   17.15 |    16.25 |   11.82 |   17.08 |                                                                          
- src                     |      75 |      100 |      50 |      75 |                                                                          
-  App.tsx                |      75 |      100 |      50 |      75 | 16                                                                       
- src/components          |      16 |    16.25 |   10.98 |   15.89 |                                                                          
-  DragDrop.tsx           |   15.68 |     10.6 |    9.85 |    16.1 | 29-43,56,66,71,76,81-120,137,146-247,254-269,274-342,347-359,527-870,921 
-  VideoComponent.tsx     |   15.21 |    42.85 |      15 |   13.33 | 74-103,116,120-132,156-284                                               
-  allVideos.tsx          |     100 |      100 |     100 |     100 |                                                                          
- src/interfaces          |       0 |        0 |       0 |       0 |                                                                          
-  CreatorInterface.tsx   |       0 |        0 |       0 |       0 |                                                                          
-  ModeratorInterface.tsx |       0 |        0 |       0 |       0 |                                                                          
-  VideoInterface.tsx     |       0 |        0 |       0 |       0 |                                                                          
-  ViewerInterface.tsx    |       0 |        0 |       0 |       0 |                                                                          
--------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------
-Test Suites: 1 passed, 1 total
-Tests:       12 passed, 12 total
+  ● tests lists are updated properly › uploading video adds to central list
+
+    TestingLibraryElementError: Unable to find an element by: [data-testid="upload-mode-check"]
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"App-Logo"[39m
+          [36m>[39m
+            [36m<span>[39m
+              [36m<img[39m
+                [33malt[39m=[32m"video camera website logo"[39m
+                [33mheight[39m=[32m"50"[39m
+                [33msrc[39m=[32m"video-camera.png"[39m
+                [33mstyle[39m=[32m"margin-top: 50px; margin-left: 20px;"[39m
+              [36m/>[39m
+            [36m</span>[39m
+            [36m<span[39m
+              [33mstyle[39m=[32m"font-size: xx-large; font-weight: bolder; margin-left: 20px;"[39m
+            [36m>[39m
+              [0mClipped![0m
+            [36m</span>[39m
+            [36m<span>[39m
+              [36m<div[39m
+                [33mstyle[39m=[32m"margin-top: 100px; margin-left: 30px;"[39m
+              [36m>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-label"[39m
+                  [33mfor[39m=[32m"userRoles"[39m
+                  [33mstyle[39m=[32m"font-size: large; font-weight: bold;"[39m
+                [36m>[39m
+                  [0mChoose your role:[0m
+                [36m</label>[39m
+                [36m<select[39m
+                  [33mclass[39m=[32m"form-select"[39m
+                  [33mdata-testid[39m=[32m"role-selector"[39m
+                  [33mid[39m=[32m"userRoles"[39m
+                [36m>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"viewer"[39m
+                  [36m>[39m
+                    [0mViewer[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"creator"[39m
+                  [36m>[39m
+                    [0mCreator[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"moderator"[39m
+                  [36m>[39m
+                    [0mModerator[0m
+                  [36m</option>[39m
+                [36m</select>[39m
+              [36m</div>[39m
+            [36m</span>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"lists"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mdata-testid[39m=[32m"viewer-component"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"lists"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"centralList"[39m
+                  [33mdata-testid[39m=[32m"central item list"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"font-weight: bold; font-size: xx-large; margin-left: 50px;"[39m
+                  [36m>[39m
+                    [0mVideos:[0m
+                  [36m</div>[39m
+                  [36m<span[39m
+                    [33mstyle[39m=[32m"margin-left: 50px;"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mFilter A-Z[0m
+                    [36m</button>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mFilter by Genre[0m
+                    [36m</button>[39m
+                  [36m</span>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"row"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"col"[39m
+                      [33mstyle[39m=[32m"column-count: 3;"[39m
+                    [36m>[39m
+                      [36m<ul[39m
+                        [33mstyle[39m=[32m"break-inside: avoid;"[39m
+                      [36m>[39m
+                        [36m<div[39m
+                          [33mdata-testid[39m=[32m"video-component"[39m
+                          [33mdraggable[39m=[32m"true"[39m
+                          [33mstyle[39m=[32m"border: 0px; margin-top: 10px; padding: 10px 20px 10px 20px; background-color: lightgray; border-radius: 15px;"[39m
+                        [36m>[39m
+                          [36m<h5>[39m
+                            [0mThe Best Pop Songs from the 2000's[0m
+                          [36m</h5>[39m
+                          [36m<div>[39m
+                            [36m<button[39m
+                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mtype[39m=[32m"button"[39m
+                            [36m>[39m
+                              [0mDescription⬇️[0m
+                            [36m</button>[39m
+                            [36m<span />[39m
+                          [36m</div>[39m
+                          [36m<div>[39m
+                            [36m<span[39m
+                              [33mstyle[39m=[32m"font-weight: bold;"[39m
+                            [36m>[39m
+                              [0mGenre: [0m
+                            [36m</span>[39m
+                            [36m<span>[39m
+                              [0mMusic[0m
+                            [36m</span>[39m
+                          [36m</div>[39m
+                          [36m<img[39m
+                            [33malt[39m=[32m"The Best Pop Songs from the 2000's"[39m
+                            [33msrc[39m=[32m"music1.jpeg"[39m
+                            [33mwidth[39m=[32m"170px"[39m
+                          [36m/>[39m
+                          [36m<div[39m
+                            [33mstyle[39m=[32m"margin-top: 10px;"[39m
+                          [36m>[39m
+                            [36m<span[39m
+                              [33mstyle[39m=[32m"margin-right: 5px;"[39m
+                            [36m>[39m
+                              [36m<button[39m
+                                [33mclass[39m=[32m"btn btn-primary"[39m
+                                [33mstyle[39m=[32m"background-color: rgb(42, 82, 190); color: white; border: 2px solid black;"[39m
+                                [33mtype[39m=[32m"button"[39m
+                              [36m>[39m
+                                [0mReport [0m
+                                [0m [0m
+                              [36m</button>[39m
+                            [36m</span>[39m
+                            [36m<span>[39m
+                              [36m<button[39m
+                                [33mclass[39m=[32m"btn btn-primary"[39m
+                                [33mstyle[39m=[32m"background-color: rgb(42, 82, 190); color: white; border: 2px solid black;"[39m
+                                [33mtype[39m=[32m"button"[39m
+                              [36m>[39m
+                                [0m👍[0m
+                              [36m</button>[39m
+                              [0m0[0m
+                            [36m</span>[39m
+                            [36m<span[39m
+                              [33mstyle[39m=[32m"margin-left: 10px;"[39m
+                            [36m>[39m
+                              [36m<button[39m
+                                [33mclass[39m=[32...
+
+      92 |     test("uploading video adds to central list", () => {
+      93 |         // check upload button
+    > 94 |         userEvent.click(screen.getByTestId("upload-mode-check"));
+         |                                ^
+      95 |         // type in a video name
+      96 |         userEvent.type(screen.getByTestId("name-form"), "sample name");
+      97 |         // type in a decsription
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByTestId (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/App.test.tsx:94:32)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+-------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------
+File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                    
+-------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------
+All files                |   17.12 |    15.11 |   12.87 |   17.06 |                                                                                      
+ src                     |      75 |      100 |      50 |      75 |                                                                                      
+  App.tsx                |      75 |      100 |      50 |      75 | 16                                                                                   
+ src/components          |   16.03 |    15.11 |   12.12 |   15.94 |                                                                                      
+  DragDrop.tsx           |   15.75 |     9.72 |   11.39 |   16.14 | 29-41,54,64,69,74,79-118,135,144-276,283-298,303-373,382-394,554-567,693,791-920,983 
+  VideoComponent.tsx     |   15.21 |    42.85 |      15 |   13.33 | 81-110,123,127-139,163-298                                                           
+  allVideos.tsx          |     100 |      100 |     100 |     100 |                                                                                      
+ src/interfaces          |       0 |        0 |       0 |       0 |                                                                                      
+  CreatorInterface.tsx   |       0 |        0 |       0 |       0 |                                                                                      
+  ModeratorInterface.tsx |       0 |        0 |       0 |       0 |                                                                                      
+  VideoInterface.tsx     |       0 |        0 |       0 |       0 |                                                                                      
+  ViewerInterface.tsx    |       0 |        0 |       0 |       0 |                                                                                      
+-------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 12 passed, 13 total
 Snapshots:   0 total
-Time:        6.843 s
+Time:        6.838 s
 Ran all test suites.
