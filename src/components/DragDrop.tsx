@@ -59,6 +59,7 @@ function DragDrop({ role }: { role: string }): JSX.Element {
     }
 
     const [allVideos, setAllVideos] = useState<Video[]>(VIDEOS);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [watchList, setWatchList] = useState<Video[]>([]);
     const [uploadMode, setUploadMode] = useState<boolean>(false);
     function updateMode(event: React.ChangeEvent<HTMLInputElement>) {
@@ -278,23 +279,13 @@ function DragDrop({ role }: { role: string }): JSX.Element {
     }
 
     function updateWatchList(toEdit: Video) {
-        setAllViewers((prevViewers) =>
-            prevViewers.map((viewer) => {
-                if (viewer.username === selectedViewer) {
-                    const newWatchlist = viewer.watchlist.map(
-                        (video: Video) => {
-                            return video.name === toEdit.name ? toEdit : video;
-                        }
-                    );
-                    return {
-                        ...viewer,
-                        watchlist: newWatchlist
-                    };
-                }
-                return viewer;
-            })
-        );
-
+        const newViewers = allViewers.map((viewer: Viewer) => {
+            const newWatchlist = viewer.watchlist.map((vid: Video) =>
+                vid.name === toEdit.name ? toEdit : vid
+            );
+            return { ...viewer, watchlist: newWatchlist };
+        });
+        setAllViewers(newViewers);
         setWatchList((previous) =>
             previous.map((video: Video) => {
                 return video.name === toEdit.name ? toEdit : video;
@@ -305,21 +296,33 @@ function DragDrop({ role }: { role: string }): JSX.Element {
     const [filteredWatchlist, setFilteredWatchlist] = useState<string>("");
     function filterWatchlistAlphabet() {
         setFilteredWatchlist("Name");
-        const sortedData = [...watchList].sort((vid1, vid2) => {
+        const sortedData = [...viewerWatchlist].sort((vid1, vid2) => {
             return vid1.name.localeCompare(vid2.name);
         });
-        setWatchList(sortedData);
+        setAllViewers(
+            allViewers.map((viewer: Viewer) =>
+                viewer.username === selectedViewer
+                    ? { ...viewer, watchlist: sortedData }
+                    : { ...viewer }
+            )
+        );
     }
 
     function filterWatchlistGenre() {
         if (filteredWatchlist != null) {
             setFilteredWatchlist("Genre");
-            const sortedData = [...watchList].sort((vid1, vid2) => {
+            const sortedData = [...viewerWatchlist].sort((vid1, vid2) => {
                 return vid1.genre === vid2.genre
                     ? vid1.name.localeCompare(vid2.name)
                     : vid1.genre.localeCompare(vid2.genre);
             });
-            setWatchList(sortedData);
+            setAllViewers(
+                allViewers.map((viewer: Viewer) =>
+                    viewer.username === selectedViewer
+                        ? { ...viewer, watchlist: sortedData }
+                        : { ...viewer }
+                )
+            );
         }
     }
     const [filteredVideos, setFilteredVideos] = useState<string>("");
@@ -502,10 +505,8 @@ function DragDrop({ role }: { role: string }): JSX.Element {
                             Videos:
                         </div>
                         <span style={{ marginLeft: "50px" }}>
-                            <Button onClick={filterAlphabet}>Filter A-Z</Button>
-                            <Button onClick={filterGenre}>
-                                Filter by Genre
-                            </Button>
+                            <Button onClick={filterAlphabet}>Sort A-Z</Button>
+                            <Button onClick={filterGenre}>Sort by Genre</Button>
                         </span>
                         <Row>
                             <Col style={{ columnCount: 3 }}>
@@ -669,13 +670,13 @@ function DragDrop({ role }: { role: string }): JSX.Element {
                                         data-testid="A-Z"
                                         onClick={filterWatchlistAlphabet}
                                     >
-                                        Filter A-Z
+                                        Sort A-Z
                                     </Button>
                                     <Button
                                         data-testid="by genre"
                                         onClick={filterWatchlistGenre}
                                     >
-                                        Filter Genre
+                                        Sort Genre
                                     </Button>
                                     <Button
                                         onClick={() =>
@@ -811,10 +812,10 @@ function DragDrop({ role }: { role: string }): JSX.Element {
                             </div>
                             <span style={{ marginLeft: "50px" }}>
                                 <Button onClick={filterAlphabet}>
-                                    Filter A-Z
+                                    Sort A-Z
                                 </Button>
                                 <Button onClick={filterGenre}>
-                                    Filter by Genre
+                                    Sort by Genre
                                 </Button>
                             </span>
                             <div key={allVideos.length.toString()}>
