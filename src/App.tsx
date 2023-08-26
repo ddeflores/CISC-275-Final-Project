@@ -10,7 +10,6 @@ export const ItemTypes = {
 };
 
 function App(): JSX.Element {
-    //For user roles
     const [role, setRole] = useState<string>("viewer");
 
     function updateRole(event: React.ChangeEvent<HTMLSelectElement>) {
@@ -26,22 +25,54 @@ function App(): JSX.Element {
                             src={require("./video-camera.png")}
                             alt="video camera website logo"
                             height={50}
+                            style={{ marginTop: "50px", marginLeft: "20px" }}
                         ></img>
                     </span>
-                    <span>Clipped!</span>
+                    <span
+                        style={{
+                            fontSize: "xx-large",
+                            fontWeight: "bolder",
+                            marginLeft: "20px"
+                        }}
+                    >
+                        Clipped!
+                    </span>
                     <span>
-                        <Form.Group controlId="userRoles">
-                            <Form.Label>Choose your role:</Form.Label>
-                            <Form.Select value={role} onChange={updateRole}>
-                                <option value="viewer">Viewer</option>
-                                <option value="creator">Creator</option>
-                                <option value="moderator">Moderator</option>
+                        <Form.Group
+                            controlId="userRoles"
+                            style={{ marginTop: "100px", marginLeft: "30px" }}
+                        >
+                            <Form.Label
+                                style={{
+                                    fontSize: "large",
+                                    fontWeight: "bold"
+                                }}
+                            >
+                                Choose your role:
+                            </Form.Label>
+                            <Form.Select
+                                value={role}
+                                onChange={updateRole}
+                                data-testid="role-selector"
+                            >
+                                <option value="viewer" data-testid="viewer">
+                                    Viewer
+                                </option>
+                                <option value="creator" data-testid="creator">
+                                    Creator
+                                </option>
+                                <option
+                                    value="moderator"
+                                    data-testid="moderator"
+                                >
+                                    Moderator
+                                </option>
                             </Form.Select>
                         </Form.Group>
                     </span>
                 </div>
-                <div className="lists">
-                    <DragDrop/>
+                <div className="lists" data-testid="drag-n-drop">
+                    <DragDrop role={role} />
                 </div>
             </div>
         </DndProvider>
